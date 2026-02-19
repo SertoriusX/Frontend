@@ -62,7 +62,6 @@
                   View CV
                 </a>
 
-
               
               </div>
             </div>
