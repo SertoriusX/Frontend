@@ -61,13 +61,13 @@ export default function PersonInfo() {
               </a>
 
 
-    <a className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
-  href={person.cv_pdf} // direct URL
-  target="_blank"
-  rel="noopener noreferrer"
->
-  View CV
-</a>
+ <a
+                href={`${BackEndConnection}/person/download-cv/${person.id}/`}
+                className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
+              >
+                View CV
+              </a>
+
             </div>
           </div>
 
