@@ -54,21 +54,16 @@
 
               <div className="d-flex justify-content-start gap-2">
                 <a
-                  href={`${BackEndConnection}/person/download-cv/${person.id}/`}
-                  className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
-                >
-                  Download CV
-                </a>
-
-
-                <a
-                  href={person.cv_pdf}
+                   href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
                 >
                   View CV
                 </a>
+
+
+              
               </div>
             </div>
 
