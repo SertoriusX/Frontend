@@ -1,20 +1,20 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { BackEndConnection } from '../api/BackEndConection'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { BackEndConnection } from "../api/BackEndConection";
 
 export default function PersonInfo() {
-  const [personInfo, setPersonInfo] = useState([])
+  const [personInfo, setPersonInfo] = useState([]);
 
   useEffect(() => {
-    axios.get(`${BackEndConnection}/get-person/`)
+    axios
+      .get(`${BackEndConnection}/get-person/`)
       .then((res) => {
-        setPersonInfo(res.data)
+        setPersonInfo(res.data);
       })
-
       .catch((err) => {
-        console.error(err)
-      })
-  }, [])
+        console.error(err);
+      });
+  }, []);
 
   return (
     <div className="container-fluid">
@@ -22,10 +22,11 @@ export default function PersonInfo() {
         <h1>Loading ...</h1>
       ) : (
         personInfo.map((person) => (
-          <div key={person.id} className="row justify-content-center col-12 p-5">
-
+          <div
+            key={person.id}
+            className="row justify-content-center col-12 p-5"
+          >
             <div className="col-12 col-md-7 d-flex flex-column py-5 gap-3 order-2 order-md-1">
-
               <h1 className="w-100 text-start">
                 {person.first_name} {person.second_name} {person.last_name}
               </h1>
@@ -35,32 +36,28 @@ export default function PersonInfo() {
               </p>
 
               <div className="d-flex justify-content-start gap-2">
+                {person.cv_pdf && (
+                  <>
+                    <a
+                      href={person.cv_pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary w-50 rounded-pill p-3 mt-md-5"
+                    >
+                      View CV
+                    </a>
 
-                {/* VIEW CV */}
-            {person.cv_pdf && (
-  
-    <a
-      href={person.cv_pdf}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn btn-primary w-50 rounded-pill p-3 mt-md-5"
-    >
-      View CV
-    </a>
-
-    <a
-      href={person.cv_pdf}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn btn-outline-primary w-50 rounded-pill p-3 mt-md-5"
-      download
-    >
-      Download CV
-    </a>
-  </>
-)}
-
-
+                    <a
+                      href={person.cv_pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="btn btn-outline-primary w-50 rounded-pill p-3 mt-md-5"
+                    >
+                      Download CV
+                    </a>
+                  </>
+                )}
               </div>
             </div>
 
@@ -84,10 +81,9 @@ export default function PersonInfo() {
                 }}
               />
             </div>
-
           </div>
         ))
       )}
     </div>
-  )
+  );
 }
