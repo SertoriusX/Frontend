@@ -38,7 +38,7 @@ export default function PersonInfo() {
 
                 {/* VIEW CV */}
             {person.cv_pdf && (
-  <>
+  
     <a
       href={person.cv_pdf}
       target="_blank"
