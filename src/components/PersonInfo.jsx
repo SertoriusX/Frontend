@@ -10,6 +10,8 @@ export default function PersonInfo() {
       .then((res) => {
         setPersonInfo(res.data)
       })
+      console.log(person.cv_pdf)
+
       .catch((err) => {
         console.error(err)
       })
