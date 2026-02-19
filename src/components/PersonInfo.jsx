@@ -65,7 +65,6 @@ export default function PersonInfo() {
   href={person.cv_pdf} // direct URL
   target="_blank"
   rel="noopener noreferrer"
-  className="btn btn-primary"
 >
   View CV
 </a>
