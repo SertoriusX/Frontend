@@ -37,9 +37,9 @@ export default function PersonInfo() {
 
                 {/* VIEW CV */}
                 <a
-                  href={person.cv_pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
+ href={person.cv_pdf}
+  target="_blank"
+  rel="noopener noreferrer"
                   className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
                 >
                   View CV
