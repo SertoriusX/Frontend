@@ -10,7 +10,6 @@ export default function PersonInfo() {
       .then((res) => {
         setPersonInfo(res.data)
       })
-      console.log(person.cv_pdf)
 
       .catch((err) => {
         console.error(err)
@@ -38,22 +37,29 @@ export default function PersonInfo() {
               <div className="d-flex justify-content-start gap-2">
 
                 {/* VIEW CV */}
-                <a
- href={person.cv_pdf}
-  target="_blank"
-  rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
-                >
-                  View CV
-                </a>
+            {person.cv_pdf && (
+  <>
+    <a
+      href={person.cv_pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-primary w-50 rounded-pill p-3 mt-md-5"
+    >
+      View CV
+    </a>
 
-                {/* DOWNLOAD CV */}
-                <a
-href={person.cv_pdf + "?fl_attachment=true"}                  download
-                  className="btn btn-outline-primary w-50 rounded-pill p-3 mt-md-5"
-                >
-                  Download CV
-                </a>
+    <a
+      href={person.cv_pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline-primary w-50 rounded-pill p-3 mt-md-5"
+      download
+    >
+      Download CV
+    </a>
+  </>
+)}
+
 
               </div>
             </div>
