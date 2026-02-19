@@ -4,24 +4,38 @@ import { BackEndConnection } from "../api/BackEndConection";
 
 export default function PersonInfo() {
   const [personInfo, setPersonInfo] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`${BackEndConnection}/get-person/`)
       .then((res) => {
-        setPersonInfo(res.data);
+        // Ensure we always store an array
+        setPersonInfo(Array.isArray(res.data) ? res.data : []);
       })
       .catch((err) => {
-        console.error(err);
+        console.error("API Error:", err);
+        setPersonInfo([]);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, []);
 
+  if (loading) {
+    return (
+      <div className="container-fluid">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="container-fluid">
-      {personInfo.length === 0 ? (
-        <h1>Loading ...</h1>
-      ) : (
-        personInfo.map((person) => (
+      {personInfo.map((person) => {
+        if (!person) return null;
+
+        return (
           <div
             key={person.id}
             className="row justify-content-center col-12 p-5"
@@ -36,7 +50,7 @@ export default function PersonInfo() {
               </p>
 
               <div className="d-flex justify-content-start gap-2">
-                {person.cv_pdf && (
+                {person.cv_pdf ? (
                   <>
                     <a
                       href={person.cv_pdf}
@@ -57,6 +71,8 @@ export default function PersonInfo() {
                       Download CV
                     </a>
                   </>
+                ) : (
+                  <span>No CV Available</span>
                 )}
               </div>
             </div>
@@ -71,7 +87,7 @@ export default function PersonInfo() {
               }}
             >
               <img
-                src={person.image_person}
+                src={person.image_person || ""}
                 alt="profile"
                 className="rounded-circle shadow-lg"
                 style={{
@@ -82,8 +98,8 @@ export default function PersonInfo() {
               />
             </div>
           </div>
-        ))
-      )}
+        );
+      })}
     </div>
   );
 }
