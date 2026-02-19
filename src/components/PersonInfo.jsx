@@ -47,8 +47,7 @@ export default function PersonInfo() {
 
                 {/* DOWNLOAD CV */}
                 <a
-                  href={person.cv_pdf}
-                  download
+href={person.cv_pdf + "?fl_attachment=true"}                  download
                   className="btn btn-outline-primary w-50 rounded-pill p-3 mt-md-5"
                 >
                   Download CV
