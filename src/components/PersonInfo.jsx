@@ -18,7 +18,7 @@
           <div key={person.id} className="row justify-content-center gap-5 ">
             <div className='col-12 col-md-4 d-flex flex-column   mt-3'>
    <div
-              className=" border border-primary col-12 col-md-2    mb-3 d-flex justify-content-center align-items-center rounded-circle order-1 order-md-1"
+              className=" border border-primary col-12 col-md-2    mb-3 d-flex justify-content-center align-items-center rounded-circle "
               style={{
                 width: "250px",
                 height: "260px",
