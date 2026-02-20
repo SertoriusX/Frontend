@@ -54,7 +54,7 @@
 
 
 
-              <p className="mt-5">
+              <p className=" mt-md-5">
                 {person.descripcion}
               </p>
 
