@@ -57,7 +57,7 @@
                    href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom w-50 rounded-pill mt-md-5"
+                  className="btn btn-primary btn-custom w-50 rounded-pill mt-md-5 p-2"
                 >
                   View CV
                 </a>
