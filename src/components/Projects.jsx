@@ -6,7 +6,6 @@ import { BackEndConnection } from "../api/BackEndConection";
 export default function Projects() {
     const [data, setData] = useState([]);
     const navigate = useNavigate();
-
     useEffect(() => {
         axios
             .get(`${BackEndConnection}/see-project/`)
