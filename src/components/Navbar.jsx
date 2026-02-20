@@ -45,7 +45,6 @@ export default function Navbar() {
             style={{ filter: "invert(1)" }}
           ></span>
         </button>
-
         <div className="collapse navbar-collapse justify-content-end" id="navMenu">
           <ul className="navbar-nav gap-3 align-items-center">
             <li>
