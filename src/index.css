@@ -137,9 +137,6 @@ body.dark-mode .my-first
     color: #ffd43b;
     transform: translateY(-4px);
 }
-.btn-custom {
-  width: 50%;
-}
 
 @media (min-width: 768px) {
   .btn-custom {
