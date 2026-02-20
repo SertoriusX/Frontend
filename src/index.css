@@ -85,7 +85,9 @@ body.dark-mode .footer-custom {
 }
 
 body.dark-mode .card,
-body.dark-mode .my-first
+body.dark-mode .my-first,
+body.dark-mode .skill-card
+
 
 {
   background:#1f2937;
