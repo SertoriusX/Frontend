@@ -20,7 +20,7 @@ export default function Projects() {
             {data.length === 0 ? (
                 <p className="text-center">Loading projects...</p>
             ) : (
-                <div className="row g-4 justify-content-center">
+                <div className="row g-4 ">
                     {data.map((port) => (
                         <div
                             key={port.id}
