@@ -26,11 +26,11 @@
 
 
 
-              <h1 className="w-100 text-center text-md-start">
+              <h1 className="col-12 col-md-7 text-center text-md-start">
                 {person.first_name} {person.second_name} {person.last_name}
               </h1>
 
-              <p className="w-100 w-md-75 border border-primary p-3 text-center text-md-start mt-md-5">
+              <p className="w-100 w-md-75  p-3 text-center text-md-start mt-md-5">
                 {person.descripcion}
               </p>
 
@@ -59,7 +59,7 @@
                    href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom w-25 rounded-pill mt-md-5 p-2"
+                  className="btn btn-primary btn-custom w-50 rounded-pill mt-md-5 p-2"
                 >
                   View CV
                 </a>
