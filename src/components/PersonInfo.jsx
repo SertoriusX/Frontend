@@ -1,41 +1,46 @@
-  import axios from 'axios'
-  import React, { useEffect, useState } from 'react'
-  import { BackEndConnection } from '../api/BackEndConection'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { BackEndConnection } from "../api/BackEndConection";
 
-  export default function PersonInfo() {
-    const [personInfo, setPersonInfo] = useState([])
-    useEffect(() => {
-      axios.get(`${BackEndConnection}/get-person/`).then((res) => { setPersonInfo(res.data) }).catch((err) => {
-        console.error(err);
-        
+export default function PersonInfo() {
+  const [personInfo, setPersonInfo] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${BackEndConnection}/get-person/`)
+      .then((res) => {
+        setPersonInfo(res.data);
       })
-    }, [])
-    return (
-      <div className="container-fluid">
-        {personInfo.length === 0 ? (
-          <h1>Loading ...</h1>
-        ) : (personInfo.map((person) => (
-          <div key={person.id} className="row justify-content-center p-5">
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
+  return (
+    <div className="container py-5">
+      {personInfo.length === 0 ? (
+        <h1 className="text-center">Loading...</h1>
+      ) : (
+        personInfo.map((person) => (
+          <div key={person.id} className="row align-items-center justify-content-center g-4">
+            
+            {/* TEXT SECTION */}
             <div
               id="About-my"
-              className="col-12 col-md-7 d-flex flex-column py-5 gap-3 order-2 order-md-1"
+              className="col-12 col-md-7 d-flex flex-column gap-3 order-2 order-md-1"
             >
-
-
-
-              <h1 className="w-100 text-center text-md-start">
+              <h1 className="text-center text-md-start">
                 {person.first_name} {person.second_name} {person.last_name}
               </h1>
 
-              <p className="w-100 w-md-75 border border-primary p-3 text-center text-md-start mt-md-5">
+              <p className="border border-primary p-3 text-center text-md-start">
                 {person.descripcion}
               </p>
 
-              <div className="d-flex align-items-center justify-content-center gap-4">
+              <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-4">
                 <a
                   href="https://github.com/SertoriusX"
-                  target="_blan"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"
                 >
@@ -52,45 +57,46 @@
                 </a>
               </div>
 
-              <div className="d-flex justify-content-center gap-2">
+              <div className="d-flex justify-content-center justify-content-md-start">
                 <a
-                   href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
+                  href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom w-25 rounded-pill mt-md-5 p-2"
+                  className="btn btn-primary rounded-pill px-4"
                 >
                   View CV
                 </a>
-
-              
               </div>
             </div>
 
-            <div
-              className="border-0 col-12 col-md-4 align-self-center mb-3 d-flex justify-content-center align-items-center rounded-circle order-1 order-md-2"
-              style={{
-                width: "350px",
-                height: "360px",
-                background: "linear-gradient(135deg, #667eea, #764ba2)",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-              }}
-            >
-
-              <img
-                src={person.image_person}
-                alt="tkg"
-                className="rounded-circle shadow-lg"
+            {/* IMAGE SECTION */}
+            <div className="col-12 col-md-4 d-flex justify-content-center order-1 order-md-2">
+              <div
+                className="rounded-circle d-flex justify-content-center align-items-center"
                 style={{
-                  width: "330px",
-                  height: "330px",
-                  objectFit: "cover",
-                  objectPosition: "0% 5%",
+                  width: "100%",
+                  maxWidth: "350px",
+                  aspectRatio: "1 / 1",
+                  background: "linear-gradient(135deg, #667eea, #764ba2)",
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
                 }}
-              />
+              >
+                <img
+                  src={person.image_person}
+                  alt="profile"
+                  className="rounded-circle img-fluid"
+                  style={{
+                    width: "90%",
+                    height: "90%",
+                    objectFit: "cover",
+                    objectPosition: "0% 5%",
+                  }}
+                />
+              </div>
             </div>
-
           </div>
-        )))}
-      </div>
-    )
-  }
+        ))
+      )}
+    </div>
+  );
+}
