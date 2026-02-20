@@ -37,5 +37,7 @@ This is my personal **portfolio website** showcasing my skills, projects, and ex
 
 ### Clone the repo
 ```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/yourusername/portfolio.git](https://github.com/SertoriusX/Frontend.git
+npm install
+npm install axios
+npm install bootstrap
