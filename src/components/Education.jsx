@@ -25,7 +25,7 @@ export default function Education() {
           <div className="card shadow-sm border-0">
             <div className="card-body">
               <h5 className="card-title">{edu.title}</h5>
-              <h6 className="card-subtitle mb-2 text-muted">{edu.name_of_School}</h6>
+              <h6 className="card-subtitle mb-2">{edu.name_of_School}</h6>
               <p className="card-text">
                 <strong>{edu.duration}</strong>
               </p>
