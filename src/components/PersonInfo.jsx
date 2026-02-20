@@ -51,12 +51,12 @@
                 </a>
               </div>
 
-              <div className="d-flex justify-content-center justify-content-center w-100">
+              <div className="d-flex justify-content-center justify-content-center ">
                 <a
                    href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom w-25 rounded-pill mt-md-5 p-3"
+                  className="btn btn-primary btn-custom w-50 w-md-25 rounded-pill mt-md-5 p-3"
                 >
                   View CV
                 </a>
