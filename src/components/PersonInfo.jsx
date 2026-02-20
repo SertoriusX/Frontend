@@ -24,7 +24,7 @@
 
 
 
-              <h1 className="w-100 text-start">
+              <h1 className="w-100 text-start  text-md-center">
                 {person.first_name} {person.second_name} {person.last_name}
               </h1>
 
