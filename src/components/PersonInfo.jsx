@@ -15,7 +15,7 @@
         {personInfo.length === 0 ? (
           <h1>Loading ...</h1>
         ) : (personInfo.map((person) => (
-          <div key={person.id} className="row justify-content-center col-12 p-5">
+          <div key={person.id} className="row justify-content-center p-5">
 
             <div
               id="About-my"
