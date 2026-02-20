@@ -14,7 +14,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div id="Projects" className="container mt-5 mb-5 p-5">
+        <div id="Projects" className="container-fluid mt-5 mb-5 p-5">
             <h1 className="text-center mb-5">Projects</h1>
 
             {data.length === 0 ? (
