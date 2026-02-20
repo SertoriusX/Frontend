@@ -28,7 +28,7 @@
                 {person.first_name} {person.second_name} {person.last_name}
               </h1>
 
-              <p className="w-100  border border-primary  p-3  mt-md-5">
+              <p className="w-100 w-md-75 border border-primary p-3 text-center text-md-start mt-md-5">
                 {person.descripcion}
               </p>
 
