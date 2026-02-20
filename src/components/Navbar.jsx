@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  }, []);
+
   const toggleDark = () => {
     document.body.classList.toggle("dark-mode");
+
+    // Save theme preference
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
   };
 
   return (
@@ -20,20 +34,20 @@ export default function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span
             className="navbar-toggler-icon"
-            style={{ filter: "invert(1)" }} 
+            style={{ filter: "invert(1)" }}
           ></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-end" id="navMenu">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navMenu"
+        >
           <ul className="navbar-nav gap-3 align-items-center">
             <li>
-              <button onClick={toggleDark} className="btn btn-sm ">
+              <button onClick={toggleDark} className="btn btn-sm">
                 🌙
               </button>
             </li>
