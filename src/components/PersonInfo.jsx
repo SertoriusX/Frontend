@@ -27,15 +27,15 @@
   }}
 >
   <img
-    src={person.image_person}
-    alt="tkg"
-    className="rounded-circle shadow-lg img-fluid"
-    style={{
-      width: "90%",
-      height: "90%",
-      objectFit: "cover",
-      objectPosition: "center",
-    }}
+                src={person.image_person}
+                alt="tkg"
+                className="rounded-circle shadow-lg "
+                style={{
+                  width: "230px",
+                  height: "230px",
+                  objectFit: "cover",
+                  objectPosition: "0% 5%",
+                }}
   />
 </div>
               <h3 className="text-center order-2 ">
