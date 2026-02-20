@@ -5,7 +5,6 @@ import Projects from '../components/Projects';
 import Education from '../components/Education';
 
 export default function Portfolio() {
-
   const [activeSection, setActiveSection] = useState("Skill");
 
   return (
