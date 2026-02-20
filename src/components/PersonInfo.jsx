@@ -51,7 +51,7 @@
                 </a>
               </div>
 
-              <div className="d-flex justify-content-center justify-content-center w-50">
+              <div className="d-flex justify-content-center justify-content-center w-100">
                 <a
                    href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
                   target="_blank"
