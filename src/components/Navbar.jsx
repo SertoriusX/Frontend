@@ -10,7 +10,6 @@ export default function Navbar() {
       document.body.classList.add("dark-mode");
     }
   }, []);
-
   const toggleDark = () => {
     document.body.classList.toggle("dark-mode");
 
