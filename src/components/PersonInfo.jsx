@@ -17,29 +17,27 @@
         ) : (personInfo.map((person) => (
           <div key={person.id} className="row justify-content-center gap-5 ">
             <div className='col-12 col-md-4 d-flex flex-column   mt-3'>
-   <div
-              className=" border border-primary col-12 col-md-2    mb-3 d-flex justify-content-center align-items-center rounded-circle "
-              style={{
-                width: "250px",
-                height: "260px",
-                background: "linear-gradient(135deg, #667eea, #764ba2)",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-              }}
-            >
-
-              <img
-                src={person.image_person}
-                alt="tkg"
-                className="rounded-circle shadow-lg "
-                style={{
-                  width: "230px",
-                  height: "230px",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-                
-              />
-              </div>
+ <div
+  className="border border-primary col-12 col-md-2 mb-3 d-flex justify-content-center align-items-center rounded-circle mx-auto"
+  style={{
+    width: "250px",
+    height: "250px",
+    background: "linear-gradient(135deg, #667eea, #764ba2)",
+    boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+  }}
+>
+  <img
+    src={person.image_person}
+    alt="tkg"
+    className="rounded-circle shadow-lg img-fluid"
+    style={{
+      width: "90%",
+      height: "90%",
+      objectFit: "cover",
+      objectPosition: "center",
+    }}
+  />
+</div>
               <h3 className="text-center order-2 ">
                 {person.first_name} {person.second_name} {person.last_name}
               </h3>
