@@ -1,22 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
+
     if (savedTheme === "dark") {
       document.body.classList.add("dark-mode");
+      setIsDark(true);
     }
   }, []);
-  const toggleDark = () => {
-    document.body.classList.toggle("dark-mode");
 
-    // Save theme preference
-    if (document.body.classList.contains("dark-mode")) {
+  const toggleDark = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+
+    if (newTheme) {
+      document.body.classList.add("dark-mode");
       localStorage.setItem("theme", "dark");
     } else {
+      document.body.classList.remove("dark-mode");
       localStorage.setItem("theme", "light");
     }
   };
@@ -40,31 +46,32 @@ export default function Navbar() {
           ></span>
         </button>
 
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navMenu"
-        >
+        <div className="collapse navbar-collapse justify-content-end" id="navMenu">
           <ul className="navbar-nav gap-3 align-items-center">
             <li>
               <button onClick={toggleDark} className="btn btn-sm">
-                🌙
+                {isDark ? "☀️" : "🌙"}
               </button>
             </li>
+
             <li className="nav-item">
               <a href="#About-my" className="nav-link nav-custom">
                 About Me
               </a>
             </li>
+
             <li className="nav-item">
               <a href="#skills" className="nav-link nav-custom">
                 Skills & Tools
               </a>
             </li>
+
             <li className="nav-item">
               <a href="#Projects" className="nav-link nav-custom">
                 Projects
               </a>
             </li>
+
             <li className="nav-item">
               <a href="#Education" className="nav-link nav-custom">
                 Education
