@@ -119,6 +119,17 @@ body.dark-mode .my-first
     transition: background 1.5s, transform 1.5s; 
   }
 
+  .btn-custom-s {
+    background: linear-gradient(90deg, #ac611b, #1c1f4a);
+    color: white;
+    width: 50%;
+    border-radius: 50px; 
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 5px solid red;
+    transition: background 1.5s, transform 1.5s; 
+  }
+
   .btn-custom:hover {
     background: linear-gradient(90deg, #1c1f4a, #4e73df); 
     transform: scale(1.05); 
@@ -136,10 +147,53 @@ body.dark-mode .my-first
 .social-icon:hover {
     color: #ffd43b;
     transform: translateY(-4px);
+}.horizontal-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px; 
+  scroll-behavior: smooth;
+  padding: 10px 20px;
 }
 
-@media (min-width: 768px) {
-  .btn-custom {
-    width: 25%;
-  }
+.horizontal-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.card-wrapper {
+  flex-shrink: 0; 
+}
+
+.skill-card {
+  width: 250px;
+  height: 270px;
+  background: #fff; 
+  border-radius: 5px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.skill-logo {
+  width: 100px;
+  height: 80px;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.slider-arrow.left {
+  left: 0;
+}
+
+.slider-arrow.right {
+  right: 0;
 }
