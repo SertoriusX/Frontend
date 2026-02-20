@@ -7,27 +7,56 @@
     useEffect(() => {
       axios.get(`${BackEndConnection}/get-person/`).then((res) => { setPersonInfo(res.data) }).catch((err) => {
         console.error(err);
+        
       })
     }, [])
     return (
-      <div className="container-fluid">
+      <div className=" mt-5">
         {personInfo.length === 0 ? (
           <h1>Loading ...</h1>
         ) : (personInfo.map((person) => (
-          <div key={person.id} className="row justify-content-center p-5">
+          <div key={person.id} className="row justify-content-center gap-5 ">
+            <div className='col-12 col-md-4 d-flex flex-column   mt-3'>
+   <div
+              className=" border border-primary col-12 col-md-2    mb-3 d-flex justify-content-center align-items-center rounded-circle order-1 order-md-1"
+              style={{
+                width: "250px",
+                height: "260px",
+                background: "linear-gradient(135deg, #667eea, #764ba2)",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+              }}
+            >
 
+              <img
+                src={person.image_person}
+                alt="tkg"
+                className="rounded-circle shadow-lg "
+                style={{
+                  width: "230px",
+                  height: "230px",
+                  objectFit: "cover",
+                  objectPosition: "0% 5%",
+                }}
+                
+              />
+              </div>
+              <h3 className="text-center order-2 ">
+                {person.first_name} {person.second_name} {person.last_name}
+              </h3>
+                            <h4 className=' order-2 text-center bold'>Software Developer</h4>
+
+            </div>
+            
+              
             <div
               id="About-my"
-              className="col-12 col-md-7 d-flex flex-column py-5 gap-3 order-2 order-md-1"
+              className="col-12 col-md-7 mt-4 d-flex flex-column text-center "
             >
 
 
 
-              <h1 className="col-12 col-md-7 text-center text-md-start">
-                {person.first_name} {person.second_name} {person.last_name}
-              </h1>
 
-              <p className="w-100 w-md-75  p-3 text-center text-md-start mt-md-5">
+              <p className="mt-5">
                 {person.descripcion}
               </p>
 
@@ -51,42 +80,21 @@
                 </a>
               </div>
 
-              <div className="d-flex justify-content-center justify-content-center ">
+              <div className="d-flex justify-content-center gap-2">
+               
+
                 <a
-                   href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
+                  href={person.cv_pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-custom  rounded-pill mt-md-5 p-3"
+                  className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
                 >
                   View CV
                 </a>
-
-              
               </div>
             </div>
 
-            <div
-              className="border-0 col-12 col-md-4 align-self-center mb-3 d-flex justify-content-center align-items-center rounded-circle order-1 order-md-2"
-              style={{
-                width: "350px",
-                height: "360px",
-                background: "linear-gradient(135deg, #667eea, #764ba2)",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-              }}
-            >
-
-              <img
-                src={person.image_person}
-                alt="tkg"
-                className="rounded-circle shadow-lg"
-                style={{
-                  width: "330px",
-                  height: "330px",
-                  objectFit: "cover",
-                  objectPosition: "0% 5%",
-                }}
-              />
-            </div>
+         
 
           </div>
         )))}
