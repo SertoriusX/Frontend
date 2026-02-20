@@ -29,7 +29,7 @@ This is my personal **portfolio website** showcasing my skills, projects, and ex
 ### Other Tools
 - Cloudinary (image hosting & optimization)
 - Git & GitHub (version control)
-- Vercel / Heroku (deployment)
+- Vercel / Render (deployment)
 
 ---
 
