@@ -35,7 +35,7 @@
                   width: "230px",
                   height: "230px",
                   objectFit: "cover",
-                  objectPosition: "0% 5%",
+                  objectPosition: "center",
                 }}
                 
               />
