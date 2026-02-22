@@ -224,11 +224,11 @@ body.dark-mode .skill-card
   background: #e5e7eb;
   color: #1c1f4a;
   width: 50%;
-  border-radius: 50px;
+  border-radius: 30px;
   padding: 1rem;
   margin-top: 2rem;
   border: 2px solid #cbd5e1;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s ease;
   cursor: pointer;
 }
