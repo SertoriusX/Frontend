@@ -232,7 +232,7 @@ body.dark-mode .skill-card
   cursor: pointer;
   padding: 0.8rem 05rem;   /* smaller padding */
 
-  width: auto;              /* remove fixed width */
+  width: 50%;             /* same as Bootstrap w-50 */
 }
 
 /* SELECTED BUTTON */
