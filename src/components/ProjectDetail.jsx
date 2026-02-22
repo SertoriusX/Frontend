@@ -60,7 +60,7 @@ export default function ProjectDetail() {
 
         <div className="col-md-6">
           <h2>{data.title}</h2>
-          <p>{data.description}</p>
+  <div dangerouslySetInnerHTML={{ __html: data.description }} />
 
           {data.tecnologias_read?.length > 0 && (
             <div className="mb-3">
