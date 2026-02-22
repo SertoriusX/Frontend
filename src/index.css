@@ -230,7 +230,7 @@ body.dark-mode .skill-card
 
   transition: all 0.2s ease;
   cursor: pointer;
-  padding: 0.2rem 08rem;   /* smaller padding */
+  padding: 0.4rem 04rem;   /* smaller padding */
 
   width: auto;              /* remove fixed width */
 }
