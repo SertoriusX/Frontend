@@ -11,7 +11,7 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     axios
-      .get(`${BackEndConnection}/see-project/${id}`)
+      .get(`${BackEndConnection}/see-project/${id}/`)
       .then((res) => {
         setData(res.data);
         if (res.data.images_read?.length > 0) setMainImage(res.data.images_read[0].image);
