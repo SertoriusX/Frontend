@@ -53,39 +53,27 @@ export default function Navbar() {
               </button>
             </li>
 
-            <li className="nav-item">
-              <a href="#About-my" className="nav-link nav-custom">
-                About Me
-              </a>
-            </li>
+        
 
-            <li className="nav-item">
-              <a href="#skills" className="nav-link nav-custom">
-                Skills & Tools
-              </a>
-            </li>
+        
 
             <li className="nav-item">
               <a href="#Projects" className="nav-link nav-custom">
                 Projects
               </a>
             </li>
-<li className="nav-item">
-  <a href="tel:+1234567890" className="nav-link nav-custom">
-    📞 +1 234 567 890
-  </a>
-</li>
-
-<li className="nav-item">
-  <a href="mailto:yourmail@gmail.com" className="nav-link nav-custom">
-    ✉️ yourmail@gmail.com
-  </a>
-</li>
             <li className="nav-item">
-              <a href="#Education" className="nav-link nav-custom">
-                Education
+              <a href="tel:+1234567890" className="nav-link nav-custom">
+                📞 +34 642171377
               </a>
             </li>
+            
+            <li className="nav-item">
+              <a href="mailto:yourmail@gmail.com" className="nav-link nav-custom">
+                ✉️ tsvetan.georgiev891@gmail.com
+              </a>
+            </li>
+           
           </ul>
         </div>
       </div>
