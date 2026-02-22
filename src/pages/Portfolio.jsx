@@ -20,14 +20,14 @@ export default function Portfolio() {
 
   <div className="d-flex flex-column flex-md-row  align-items-center justify-content-center gap-3 mb-3 mt-3">
     <button
-      className={`btn-toggle ${activeSection === "Skill" ? "active" : ""}`}
+      className={`btn-toggle text-center ${activeSection === "Skill" ? "active" : ""}`}
       onClick={() => setActiveSection("Skill")}
     >
       Skill
     </button>
 
     <button
-      className={`btn-toggle ${activeSection === "Education" ? "active" : ""}`}
+      className={`btn-toggle text-center ${activeSection === "Education" ? "active" : ""}`}
       onClick={() => setActiveSection("Education")}
     >
       Education
