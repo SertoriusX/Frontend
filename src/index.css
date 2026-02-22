@@ -116,17 +116,15 @@ body.dark-mode .skill-card
   border-radius: 50px;
   padding: 1rem;
   margin-top: 2rem;
-
-  border: 2px solid #6c8cff;   /* softer blue border */
+  border: 2px solid #6c8cff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
   transition: all 0.4s ease;
 }
 
-.btn-custom-activate:hover {
-  background: linear-gradient(90deg, #3b5edb, #141738);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+.btn-custom-activate:active {
+  background: linear-gradient(90deg, #2e59d9, #10132f);
+  border-color: #3b5edb;
+  transform: scale(0.97);
 }
   .btn-custom {
     background: linear-gradient(90deg, #4e73df, #1c1f4a);
