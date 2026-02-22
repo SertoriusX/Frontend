@@ -122,7 +122,7 @@ body.dark-mode .skill-card
   }
 
   .btn-custom-s {
-    background: linear-gradient(90deg, #ac611b, #1c1f4a);
+    background: linear-gradient(90deg, #4e73df, #1c1f4a);
     color: white;
     width: 50%;
     border-radius: 50px; 
@@ -131,7 +131,11 @@ body.dark-mode .skill-card
     border: 5px solid red;
     transition: background 1.5s, transform 1.5s; 
   }
-
+ .btn-custom-s:hover {
+    background: linear-gradient(90deg, #1c1f4a, #4e73df); 
+    transform: scale(1.05); 
+    cursor: pointer;
+  }
   .btn-custom:hover {
     background: linear-gradient(90deg, #1c1f4a, #4e73df); 
     transform: scale(1.05); 
