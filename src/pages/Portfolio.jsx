@@ -22,15 +22,15 @@ export default function Portfolio() {
 
 
 
-            <button
-  className={`btn-custom ${activeSection === "Skill" ? "active" : ""}`}
+      <button
+  className={`btn-toggle ${activeSection === "Skill" ? "active" : ""}`}
   onClick={() => setActiveSection("Skill")}
 >
   Skill
 </button>
 
 <button
-  className={`btn-custom ${activeSection === "Education" ? "active" : ""}`}
+  className={`btn-toggle ${activeSection === "Education" ? "active" : ""}`}
   onClick={() => setActiveSection("Education")}
 >
   Education
