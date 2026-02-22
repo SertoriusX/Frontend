@@ -31,7 +31,7 @@ export default function Projects() {
                                     src={port.image_project}
                                     className="card-img-top"
                                     alt={port.title}
-                                    style={{ objectFit: "cover", height: "280px" }}
+                                    style={{ objectFit: "cover" }}
                                 />
                                 <div className="card-body d-flex flex-column">
                                     <h5 className="card-title">{port.title}</h5>
