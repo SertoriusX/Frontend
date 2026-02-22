@@ -20,14 +20,14 @@ export default function Portfolio() {
 
           <div className="d-flex justify-content-center mb-3 gap-3">
             <button
-              className={`btn ${activeSection === "Skill" ? "btn-custom-s" : "btn-custom-s"}`}
+              className={`btn ${activeSection === "Skill" ? "btn-custom-activate" : "btn-custom-s"}`}
               onClick={() => setActiveSection("Skill")}
             >
               Skill
             </button>
 
             <button
-              className={`btn  ${activeSection === "Education" ? "btn-custom-s" : "btn-custom-s"}`}
+              className={`btn  ${activeSection === "Education" ? "btn-custom-activate" : "btn-custom-s"}`}
               onClick={() => setActiveSection("Education")}
             >
               Education
