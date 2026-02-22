@@ -26,7 +26,7 @@
     boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
   }}
 >
-  <img
+                <img
                 src={person.image_person}
                 alt="tkg"
                 className="rounded-circle shadow-lg "
@@ -36,8 +36,8 @@
                   objectFit: "cover",
                   objectPosition: "0% 5%",
                 }}
-  />
-</div>
+                  />
+  </div>
               <h3 className="text-center order-2 ">
                 {person.first_name} {person.second_name} {person.last_name}
               </h3>
