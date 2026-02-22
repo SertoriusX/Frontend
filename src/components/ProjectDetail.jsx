@@ -30,7 +30,7 @@ export default function ProjectDetail() {
               src={mainImage}
               alt={data.title}
               className="img-fluid rounded mb-3"
-              style={{ height: "400px", objectFit: "cover", width: "100%" }}
+              style={{ objectFit: "cover", width: "100%" }}
             />
           ) : (
             <p>No images available</p>
