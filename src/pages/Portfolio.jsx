@@ -18,7 +18,7 @@ export default function Portfolio() {
 
         <div className="col-12 col-md-5">
 
-          <div className="d-flex justify-content-center mb-3 mt-3 gap-3">
+          <div className="d-flex justify-content-center mb-3 mt-3 gap-3 col-12 col-md-5">
 
 
 
