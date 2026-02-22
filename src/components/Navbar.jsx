@@ -70,7 +70,17 @@ export default function Navbar() {
                 Projects
               </a>
             </li>
+<li className="nav-item">
+  <a href="tel:+1234567890" className="nav-link nav-custom">
+    📞 +1 234 567 890
+  </a>
+</li>
 
+<li className="nav-item">
+  <a href="mailto:yourmail@gmail.com" className="nav-link nav-custom">
+    ✉️ yourmail@gmail.com
+  </a>
+</li>
             <li className="nav-item">
               <a href="#Education" className="nav-link nav-custom">
                 Education
