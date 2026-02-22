@@ -24,7 +24,7 @@ export default function Projects() {
                     {data.map((port) => (
                         <div
                             key={port.id}
-                            className="col-12 col-sm-6 col-md-4 d-flex"
+                            className="col-12 col-sm-6 col-md-3 d-flex"
                         >
                             <div className="card shadow-sm flex-fill 18rem; hover-shadow">
                                 <img
