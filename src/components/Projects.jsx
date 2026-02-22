@@ -26,7 +26,7 @@ export default function Projects() {
                             key={port.id}
                             className="col-12 col-sm-6 col-md-4 d-flex"
                         >
-                            <div className="card shadow-sm flex-fill hover-shadow">
+                            <div className="card shadow-sm flex-fill 18rem; hover-shadow">
                                 <img
                                     src={port.image_project}
                                     className="card-img-top"
