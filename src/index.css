@@ -220,3 +220,24 @@ body.dark-mode .skill-card
 .slider-arrow.right {
   right: 0;
 }
+.btn-toggle {
+  background: #e5e7eb;
+  color: #1c1f4a;
+  width: 50%;
+  border-radius: 50px;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 2px solid #cbd5e1;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* SELECTED BUTTON */
+.btn-toggle.active {
+  background: linear-gradient(90deg, #4e73df, #1c1f4a);
+  color: white;
+  border: 3px solid #00c6ff;
+  box-shadow: 0 0 18px rgba(0, 198, 255, 0.7);
+  transform: scale(1.05);
+}
