@@ -238,6 +238,6 @@ body.dark-mode .skill-card
   background: linear-gradient(90deg, #4e73df, #1c1f4a);
   color: white;
   border: 3px solid #00c6ff;
-  box-shadow: 0 0 18px rgba(0, 198, 255, 0.7);
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
   transform: scale(1.05);
 }
