@@ -230,18 +230,20 @@ body.dark-mode .skill-card
 
   transition: all 0.2s ease;
   cursor: pointer;
-  padding: 0.8rem 05rem;   /* smaller padding */
+  padding: 0.8rem 2rem;   /* nice padding */
+  text-align: center;
 
-  width: 50%;             /* same as Bootstrap w-50 */
+  width: 100%;            /* full width on small screens */
+  max-width: 50%;         /* max 50% on medium+ screens */
+  box-sizing: border-box; /* ensures padding doesn't break width */
 }
 
-/* SELECTED BUTTON */
+/* Active / Selected Button */
 .btn-toggle.active {
   background: linear-gradient(90deg, #4e73df, #1c1f4a);
   color: white;
   border: 1px solid #4e73df;
 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-
-  transform: none;          /* remove scale */
+  transform: none;
 }
