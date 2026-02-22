@@ -18,7 +18,7 @@ export default function Portfolio() {
 
         <div className="col-12 col-md-5">
 
-  <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mb-3 mt-3">
+  <div className="d-flex flex-column flex-md-row  align-items-center justify-content-center gap-3 mb-3 mt-3">
     <button
       className={`btn-toggle ${activeSection === "Skill" ? "active" : ""}`}
       onClick={() => setActiveSection("Skill")}
