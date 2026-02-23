@@ -82,7 +82,7 @@
                
 
                 <a
-                  href="https://drive.google.com/file/d/1K_oIC7IHZTvh8fgln6VdU7KNRIiwD19D/view"
+                  href="https://drive.google.com/file/d/1w7uuZjuY4OfEHJIJyPAe8vZdk76UoSxe/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary btn-custom w-50 rounded-pill p-3 mt-md-5"
