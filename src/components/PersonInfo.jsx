@@ -7,7 +7,7 @@
     useEffect(() => {
       axios.get(`${BackEndConnection}/get-person/`).then((res) => { setPersonInfo(res.data) }).catch((err) => {
         console.error(err);
-        
+      
       })
     }, [])
     return (
